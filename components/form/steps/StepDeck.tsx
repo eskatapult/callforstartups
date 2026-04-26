@@ -9,10 +9,10 @@ interface StepDeckProps {
   form: FormState;
   set: (k: "deck", v: DeckAttachment | null) => void;
   errors: Partial<Record<keyof FormState, string>>;
-  maxSizeMb?: number;
+  maxDeckSizeMb?: number;
 }
 
-export default function StepDeck({ form, set, errors, maxSizeMb }: StepDeckProps) {
+export default function StepDeck({ form, set, errors, maxDeckSizeMb }: StepDeckProps) {
   const f = CONTENT.fields.deck;
   return (
     <>
@@ -20,7 +20,7 @@ export default function StepDeck({ form, set, errors, maxSizeMb }: StepDeckProps
         <FileUpload
           file={form.deck}
           onChange={(v) => set("deck", v)}
-          maxSizeMb={maxSizeMb}
+          maxSizeMb={maxDeckSizeMb}
           error={errors.deck}
         />
       </Field>
