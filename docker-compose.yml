@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local          # RESEND_API_KEY, ANTHROPIC_API_KEY
+    volumes:
+      # Mount config.json so you can edit it without rebuilding the image.
+      # Comment this out if you prefer to bake config into the image at build time.
+      - ./config.json:/app/config.json:ro
+    restart: unless-stopped

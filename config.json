@@ -1,0 +1,8 @@
+{
+  "reviewMode": "heuristic",
+  "reviewStrictness": "standard",
+  "anthropicModel": "claude-sonnet-4-6",
+  "maxDeckSizeMb": 25,
+  "submissionsEmail": "es@katapult.vc, es@destrukto.com",
+  "emailFrom": "Global Call for Startups <noreply@katapult.vc>"
+}
