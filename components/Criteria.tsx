@@ -13,8 +13,10 @@ export default function Criteria() {
         {c.items.map((item) => (
           <div className="crit" key={item.num}>
             <div className="crit-num">{item.num}</div>
-            <h4 className="crit-title">{item.title}</h4>
-            <p className="crit-body">{item.body}</p>
+            <div>
+              <h4 className="crit-title">{item.title}</h4>
+              <p className="crit-body">{item.body}</p>
+            </div>
           </div>
         ))}
       </div>

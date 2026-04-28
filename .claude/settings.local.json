@@ -11,7 +11,18 @@
       "Bash(npm install *)",
       "Bash(npm audit *)",
       "Bash(node_modules/.bin/next --version)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "WebFetch(domain:api.anthropic.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(gunzip -c \"/Users/eiriksvendsen/.claude/projects/-Users-eiriksvendsen-Documents-tech-food-call-for-startups/0637830e-3124-4547-848f-bc974190ef2e/tool-results/webfetch-1777333017634-ozi7pf.bin\")",
+      "Bash(tar -t)",
+      "Bash(tar -xO global-call-for-startups/chats/chat1.md)",
+      "Bash(tar -xO global-call-for-startups/project/design_handoff_application_redesign/preview/styles.css)",
+      "Bash(tar -xO global-call-for-startups/project/design_handoff_application_redesign/preview/form.css)",
+      "Bash(tar -xO global-call-for-startups/project/design_handoff_application_redesign/preview/app.jsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }

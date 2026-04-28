@@ -1,18 +1,19 @@
 import { CONTENT } from "@/lib/content";
 
+const NAV_LINKS = ["Apply", "About", "Winners 2025", "Partners", "FAQ", "Contact"];
+
 export default function Topbar() {
   const { brand } = CONTENT;
   return (
     <header className="topbar">
       <div className="brand">
-        <div className="brand-mark" />
         <span>{brand.name}</span>
       </div>
-      <div className="brand-partners">
-        {brand.partners.map((p) => (
-          <span key={p}>{p}</span>
+      <nav className="brand-partners">
+        {NAV_LINKS.map((link) => (
+          <span key={link}>{link}</span>
         ))}
-      </div>
+      </nav>
       <a href="#apply" className="topbar-cta">
         {brand.cta}
       </a>
