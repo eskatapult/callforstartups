@@ -9,11 +9,22 @@ import type { FormState } from "@/lib/types";
 interface StepProps {
   form: FormState;
   set: (k: keyof FormState, v: string) => void;
+  setError?: (k: keyof FormState, msg?: string) => void;
   errors: Partial<Record<keyof FormState, string>>;
 }
 
-export default function StepCompany({ form, set, errors }: StepProps) {
+export default function StepCompany({ form, set, setError, errors }: StepProps) {
   const f = CONTENT.fields;
+
+  function validateWebsite() {
+    const v = form.website.trim();
+    if (v && !/^https?:\/\/.+\..+/.test(v)) {
+      setError?.("website", "Enter a valid URL (e.g. https://yourco.com)");
+    } else {
+      setError?.("website");
+    }
+  }
+
   return (
     <>
       <Field label={f.companyName.label} error={errors.companyName}>
@@ -29,7 +40,8 @@ export default function StepCompany({ form, set, errors }: StepProps) {
           <TextField
             type="url"
             value={form.website}
-            onChange={(v) => set("website", v)}
+            onChange={(v) => { set("website", v); setError?.("website"); }}
+            onBlur={validateWebsite}
             placeholder={f.website.placeholder}
             error={errors.website}
           />

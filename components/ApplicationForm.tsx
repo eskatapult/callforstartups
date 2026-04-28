@@ -44,6 +44,7 @@ type StepId = (typeof CONTENT.steps)[number]["id"];
 interface StepProps {
   form: FormState;
   set: (k: keyof FormState, v: string) => void;
+  setError?: (k: keyof FormState, msg?: string) => void;
   errors: Partial<Record<keyof FormState, string>>;
 }
 
@@ -117,6 +118,17 @@ export default function ApplicationForm({ config }: Props) {
 
   const setTextField = (k: keyof FormState, v: string) => set(k, v);
   const setDeck = (k: "deck", v: DeckAttachment | null) => set(k, v);
+
+  const setError = (k: keyof FormState, msg?: string) => {
+    setErrors((e) => {
+      if (!msg) {
+        const next = { ...e };
+        delete next[k];
+        return next;
+      }
+      return { ...e, [k]: msg };
+    });
+  };
 
   const completed = useMemo(() => ({
     contact: !!(form.contactName && form.contactEmail && form.contactRole),
@@ -290,7 +302,7 @@ export default function ApplicationForm({ config }: Props) {
               maxDeckSizeMb={config.maxDeckSizeMb}
             />
           ) : (
-            <StepComp form={form} set={setTextField} errors={errors} />
+            <StepComp form={form} set={setTextField} setError={setError} errors={errors} />
           )}
 
           <div className="panel-foot">

@@ -25,7 +25,11 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          <span className="hero-image-label">[ Photo: Norrsken Impact Week — pitch stage ]</span>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/677f867447d8533c54a1c738/8ac736be-e7b3-4a5f-bbda-d27d52042ebf/image-asset.jpeg"
+            alt="Norrsken Impact Week — pitch stage"
+            className="hero-photo"
+          />
         </div>
       </div>
     </section>

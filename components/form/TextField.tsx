@@ -3,6 +3,7 @@
 interface TextFieldProps {
   value: string;
   onChange: (v: string) => void;
+  onBlur?: () => void;
   placeholder?: string;
   type?: "text" | "email" | "url" | "number";
   error?: string;
@@ -11,6 +12,7 @@ interface TextFieldProps {
 export default function TextField({
   value,
   onChange,
+  onBlur,
   placeholder,
   type = "text",
   error,
@@ -20,6 +22,7 @@ export default function TextField({
       type={type}
       value={value}
       onChange={(e) => onChange(e.target.value)}
+      onBlur={onBlur}
       placeholder={placeholder}
       className={error ? "error" : ""}
     />

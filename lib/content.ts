@@ -3,7 +3,7 @@
 export const CONTENT = {
   brand: {
     name: "Global Call for Startups",
-    partners: ["Katapult", "Norrsken", "EAT Foundation"],
+    partners: ["Katapult", "Norrsken", "Accenture"],
     cta: "Apply now →",
   },
 
@@ -12,7 +12,7 @@ export const CONTENT = {
     headline: "Apply here. Help us transform the food system at the scale",
     headlineAccent: "science demands",
     headlineEnd: ".",
-    lede: "A competition for early-stage ventures, built on the 2025 EAT-Lancet Commission report — the global guardrails for healthy, sustainable, and socially just food systems. Winners pitch at Impact/Week Barcelona and gain tailored support from Katapult and Norrsken.",
+    lede: "A competition for early-stage ventures, built on the 2025 EAT-Lancet Commission report — the global guardrails for healthy, sustainable, and socially just food systems. Winners pitch at Impact/Week Barcelona and gain tailored support from Katapult, Norrsken, and Accenture.",
     meta: [
       { label: "Stage", value: "Pre-seed → Series A" },
       { label: "Closing", value: "15 June 2026" },
@@ -50,7 +50,7 @@ export const CONTENT = {
       {
         num: "05",
         title: "Customer",
-        body: "Benefits confirmed from primary market research or first customer testing.",
+        body: "Benefits of innovations and willingness to pay confirmed from market traction or partnerships, or first customer testing for pre-seed applicants.",
       },
       {
         num: "06",
@@ -69,7 +69,7 @@ export const CONTENT = {
     eyebrow: "§ 02 — Submit your idea",
     headline: "Apply here.",
     headlineItalic: "Six sections. Fifteen minutes.",
-    meta: "Applications are reviewed by the EAT-Lancet jury and partners.",
+    meta: "Applications are reviewed by the Anchor Partners.",
     metaDeadline: "Closing 15 June 2026.",
   },
 
@@ -99,7 +99,7 @@ export const CONTENT = {
     },
     company: {
       title: "Tell us about your company",
-      sub: "The basics. Keep the website URL current — reviewers visit.",
+      sub: "The basics. Use a current website URL — reviewers visit.",
     },
     stage: {
       title: "Where are you on the journey?",
@@ -154,7 +154,7 @@ export const CONTENT = {
     },
     deck: {
       label: "Pitch deck",
-      help: "The deck should cover: problem, solution, tech validation, team, traction, ask. 10–20 slides.",
+      help: "The deck should cover: problem, solution, tech validation, team, and traction. 10–20 slides.",
       dropTitle: "Upload pitch deck",
       dropHint: "PDF, PPTX or KEY · up to 25 MB · max 20 slides recommended",
       removeButton: "Remove",
@@ -167,7 +167,7 @@ export const CONTENT = {
   },
 
   deckLegal:
-    "By submitting you confirm you have rights to all materials included and consent to evaluation by Katapult, Norrsken, and their review partners under the EAT Foundation scientific framework.",
+    "By submitting you confirm you have rights to all materials included and consent to evaluation by Katapult, Norrsken, Accenture, and their review partners under the EAT-Lancet scientific framework.",
 
   review: {
     loadingTitle: "Reviewing your application",
@@ -187,7 +187,7 @@ export const CONTENT = {
 
   submitted: {
     title: "Application received",
-    body: "Thank you. Your submission has been logged and shared with the review panel at Katapult and Norrsken. You'll hear from us within four weeks.",
+    body: "Thank you. Your submission has been logged and shared with the review panel at Katapult, Norrsken, and Accenture. You'll hear from us within four weeks.",
     refLabel: "Ref",
     scoreLabel: "Score",
     submittedLabel: "Submitted",

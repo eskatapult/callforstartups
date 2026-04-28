@@ -8,11 +8,22 @@ import type { FormState } from "@/lib/types";
 interface StepProps {
   form: FormState;
   set: (k: keyof FormState, v: string) => void;
+  setError?: (k: keyof FormState, msg?: string) => void;
   errors: Partial<Record<keyof FormState, string>>;
 }
 
-export default function StepContact({ form, set, errors }: StepProps) {
+export default function StepContact({ form, set, setError, errors }: StepProps) {
   const f = CONTENT.fields;
+
+  function validateEmail() {
+    const v = form.contactEmail.trim();
+    if (v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+      setError?.("contactEmail", "Enter a valid email address");
+    } else {
+      setError?.("contactEmail");
+    }
+  }
+
   return (
     <>
       <div className="field-row">
@@ -37,7 +48,8 @@ export default function StepContact({ form, set, errors }: StepProps) {
         <TextField
           type="email"
           value={form.contactEmail}
-          onChange={(v) => set("contactEmail", v)}
+          onChange={(v) => { set("contactEmail", v); setError?.("contactEmail"); }}
+          onBlur={validateEmail}
           placeholder={f.contactEmail.placeholder}
           error={errors.contactEmail}
         />
