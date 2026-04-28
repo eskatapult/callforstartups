@@ -76,15 +76,14 @@ html, body {
   gap: 32px;
   align-items: center;
 }
-.brand-partners span {
+.brand-partners a {
   font-size: 15px;
   color: var(--ink);
   font-weight: 400;
-  cursor: pointer;
+  text-decoration: none;
   transition: opacity 0.2s;
 }
-.brand-partners span:hover { opacity: 0.6; }
-.brand-partners span + span::before { display: none; }
+.brand-partners a:hover { opacity: 0.6; }
 .topbar-cta {
   display: inline-flex;
   align-items: center;
